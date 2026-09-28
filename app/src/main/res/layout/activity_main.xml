@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Kök: FrameLayout
+    - LinearLayout (dikey): topBarWebView (sabit yükseklik) + contentContainer (kalan alan)
+    - overlayWebView: tam ekran, varsayılan olarak GONE (paneller açıldığında görünür olur)
+      GONE iken hiçbir dokunma olayını yakalamaz, böylece altındaki gerçek sayfa
+      normal şekilde kullanılabilir kalır.
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <WebView
+            android:id="@+id/topBarWebView"
+            android:layout_width="match_parent"
+            android:layout_height="104dp"
+            android:background="#FFFFFF" />
+
+        <FrameLayout
+            android:id="@+id/contentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF" />
+
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/overlayWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</FrameLayout>

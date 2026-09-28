@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>Yeni Sekme</title>
+<style>
+  :root { --bg:#f5f6fa; --surface:#ffffff; --border:#e4e6ef; --text:#202133; --text-dim:#7a7d94; --accent:#5b5bf0; }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; min-height: 100%;
+    background: linear-gradient(180deg, #fbfbff 0%, #f5f6fa 100%);
+    color: var(--text);
+    font-family: -apple-system, Roboto, "Segoe UI", Arial, sans-serif;
+    display: flex; flex-direction: column; align-items: center;
+    padding: 12vh 20px 40px 20px;
+  }
+  .logo { font-size: 30px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 22px; }
+  .logo span { color: var(--accent); }
+  form.search {
+    width: 100%; max-width: 420px; height: 50px;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 999px;
+    display: flex; align-items: center; padding: 0 18px; gap: 10px;
+    box-shadow: 0 6px 20px rgba(30,30,60,.06);
+  }
+  form.search input {
+    flex: 1; border: none; outline: none; background: transparent; font-size: 15px; color: var(--text);
+  }
+  .quick-links {
+    display: grid; grid-template-columns: repeat(3, 84px); gap: 18px; margin-top: 36px; justify-content: center;
+  }
+  .quick-link { display: flex; flex-direction: column; align-items: center; gap: 8px; text-decoration: none; }
+  .qcard {
+    width: 56px; height: 56px; border-radius: 16px; background: var(--surface);
+    border: 1px solid var(--border); display: flex; align-items: center; justify-content: center;
+    font-size: 20px; font-weight: 700; color: var(--accent);
+  }
+  .qlabel { font-size: 11px; color: var(--text-dim); text-align: center; }
+</style>
+</head>
+<body>
+  <div class="logo">Nexus<span>.</span></div>
+
+  <form class="search" action="https://www.google.com/search" method="get">
+    <span>🔍</span>
+    <input type="text" name="q" placeholder="Web'de arayın veya bir adres yazın" autocomplete="off" />
+  </form>
+
+  <div class="quick-links">
+    <a class="quick-link" href="https://www.youtube.com"><div class="qcard">Y</div><div class="qlabel">YouTube</div></a>
+    <a class="quick-link" href="https://www.wikipedia.org"><div class="qcard">W</div><div class="qlabel">Wikipedia</div></a>
+    <a class="quick-link" href="https://www.github.com"><div class="qcard">G</div><div class="qlabel">GitHub</div></a>
+    <a class="quick-link" href="https://www.google.com/search?q=g%C3%BCncel%20haberler"><div class="qcard">H</div><div class="qlabel">Haberler</div></a>
+    <a class="quick-link" href="https://www.google.com/search?q=online%20al%C4%B1%C5%9Fveri%C5%9F"><div class="qcard">A</div><div class="qlabel">Alışveriş</div></a>
+  </div>
+</body>
+</html>
